@@ -39,7 +39,29 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 200),
+            const Row(
+              children: [
+                Stack(
+                  children: [
+                    Positioned(
+                      top: 50,
+                      bottom: 10,
+                      right: 7,
+                      left: -150,
+                      child: CircleAvatar(
+                        radius: 100,
+                        backgroundColor: Color.fromRGBO(143, 255, 215, 0.5),
+                      ),
+                    ),
+                    CircleAvatar(
+                      radius: 110,
+                      backgroundColor: Color.fromRGBO(143, 255, 215, 0.5),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 150),
             const Text('Gets things with TODs',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 20),
@@ -50,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                   child: Text(
                       'Lorem ipsum dolor sit amet consectetur. Eget sit nec et euismod. Consequat urna quam felis interdum quisque. Malesuada adipiscing tristique ut eget sed.')),
             ),
-            const SizedBox(height: 200),
+            const SizedBox(height: 100),
             SizedBox(
               width: 200,
               height: 50,
